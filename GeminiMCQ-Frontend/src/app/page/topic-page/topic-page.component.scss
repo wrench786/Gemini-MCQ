@@ -1,0 +1,103 @@
+.container{
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.btn{
+  // padding: 10px 20px;
+  background-color: #1A4D2E;
+  color: white;
+  border: 2px solid #1A4D2E;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.btn:hover{
+  background-color: #436850;
+  border-color: #436850;
+}
+.btn:active{
+  background-color: #708d67;
+  border-color: #708d67;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  .search-box {
+    width: 300px;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+  }
+
+  .search-box:focus {
+    border-color: #609966;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+
+  .search-btn {
+    padding: 10px 20px;
+    border-radius: 0 30px 30px 0;
+  }
+  .search-btn:focus {
+    outline: none;
+  }
+}
+
+
+.card-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;  
+  width: 100%;
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: #609966; /* Yellow background similar to the uploaded banner */
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+
+    p{
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  /* Hover Effect */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .card.selected {
+    background-color: #436850;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
+
+.submit-btn{
+
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 40px;
+}

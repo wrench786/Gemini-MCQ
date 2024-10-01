@@ -20,8 +20,8 @@ public class GeminiController {
     }
 
     @PostMapping("/query")
-    public List<Question> query(@RequestBody Map<String, String> request) throws IOException {
-        String query = "Generate 10 multiple-choice questions about " + request.get("topic")
+    public List<Question> query(@RequestBody String topic) throws IOException {
+        String query = "Generate 10 multiple-choice questions about " + topic
                 + " in the following JSON format:\n"
                 + "{ \"question\": \"<question_text>\",  \"optionA\": \"<1st option>\", \"optionB\": \"<2nd option>\", \"optionC\": \"<3rd option>\", \"optionD\": \"<4th option>\", \"answer\": <index_of_correct_answer> }";
 

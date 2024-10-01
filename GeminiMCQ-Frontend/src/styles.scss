@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EDF1D6; /* Off-white background */
+    color: #333333; /* Dark gray text for readability */
+}
+
+/* Navigation Bar */
+header {
+    background-color: #16423C; /* Teal for primary color */
+    padding: 1rem;
+    text-align: center;
+}

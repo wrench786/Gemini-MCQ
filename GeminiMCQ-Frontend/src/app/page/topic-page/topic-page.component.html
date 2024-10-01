@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="search-section">
+        <input type="text" class="search-box"  placeholder="Enter Topic" [(ngModel)]="customTopic" />
+        <button class="search-btn btn" (click)="submitTopic()">Submit</button>
+    </div>
+
+    <div class="card-section">
+        <div *ngFor="let option of options" class="card" 
+            [class.selected]="selectedOption === option"
+            (click)="selectOption(option)">
+            <p>{{option}}</p>
+        </div>
+    </div>
+
+    <button class="submit-btn btn"  (click)="submitOption()" [disabled]="!selectedOption">Submit</button>
+</div>
+  
+
+  
