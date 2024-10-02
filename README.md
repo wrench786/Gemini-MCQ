@@ -13,7 +13,8 @@ A full-stack web application that dynamically generates multiple-choice question
 - **Responsive UI**: Built with Angular for a seamless user experience.
 
 - ![image](https://github.com/user-attachments/assets/03b7323b-b76e-42d4-82d8-1a300fde65bf)
-- ![image](https://github.com/user-attachments/assets/1eddab65-22ce-4349-8655-11bdbe3b6450)
+![image](https://github.com/user-attachments/assets/d9e36cb5-472a-4d9d-9fd5-7ce87ae89c21)
+
 
 
 
