@@ -1,4 +1,4 @@
-# MCQ Generation Web Application
+![image](https://github.com/user-attachments/assets/89df3478-e655-4e7e-8efc-f912f19fd3b9)# MCQ Generation Web Application
 
 ## Overview
 
@@ -11,6 +11,9 @@ A full-stack web application that dynamically generates multiple-choice question
 - **Timer Functionality**: Starts a countdown timer for quizzes and auto-submits after 5 minutes.
 - **Feedback on Answers**: Displays correct answers after submission.
 - **Responsive UI**: Built with Angular for a seamless user experience.
+
+- ![image](https://github.com/user-attachments/assets/03b7323b-b76e-42d4-82d8-1a300fde65bf)
+
 
 ## Tech Stack
 
