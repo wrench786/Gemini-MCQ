@@ -1,5 +1,86 @@
-<div class="card-section">
-    <div *ngFor="let question of questions" class="card">
-        <p>{{question.question}}</p>
+<div class="quiz-container">
+  <h2>Quiz</h2>
+
+  <!-- Show loading message until the data is fully loaded -->
+  <div *ngIf="!dataLoaded">Loading questions...</div>
+
+  <!-- Quiz content -->
+  <div *ngIf="dataLoaded">
+    <div class="timer" *ngIf="!submitted">Time Left: {{ formatTime(timer) }}</div>
+
+    <form *ngIf="!submitted" (ngSubmit)="submitQuiz()">
+      <div *ngFor="let question of questions; let i = index" class="question-card">
+        <p>{{ i + 1 }}. {{ question.question }}</p>
+        <div class="options">
+          <label>
+            <input type="radio" name="option{{ i }}" (click)="selectAnswer(i, 1)" />
+            {{ question.optionA }}
+          </label>
+          <label>
+            <input type="radio" name="option{{ i }}" (click)="selectAnswer(i, 2)" />
+            {{ question.optionB }}
+          </label>
+          <label>
+            <input type="radio" name="option{{ i }}" (click)="selectAnswer(i, 3)" />
+            {{ question.optionC }}
+          </label>
+          <label>
+            <input type="radio" name="option{{ i }}" (click)="selectAnswer(i, 4)" />
+            {{ question.optionD }}
+          </label>
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- After the quiz is submitted -->
+    <div *ngIf="submitted">
+      <h3>Your Results</h3>
+      <div *ngFor="let question of questions; let i = index" class="question-card">
+        <p>{{ i + 1 }}. {{ question.question }}</p>
+        <div class="options">
+          <!-- Option A -->
+          <label [ngClass]="{
+              'correct-answer': question.ans === 1,
+              'wrong-answer': selectedAnswers[i] === 1 && question.ans !== 1
+            }">
+            {{ question.optionA }}
+            <span *ngIf="selectedAnswers[i] === 1">(Your Answer)</span>
+            <span *ngIf="question.ans === 1">(Correct Answer)</span>
+          </label>
+          
+          <!-- Option B -->
+          <label [ngClass]="{
+              'correct-answer': question.ans === 2,
+              'wrong-answer': selectedAnswers[i] === 2 && question.ans !== 2
+            }">
+            {{ question.optionB }}
+            <span *ngIf="selectedAnswers[i] === 2">(Your Answer)</span>
+            <span *ngIf="question.ans === 2">(Correct Answer)</span>
+          </label>
+
+          <!-- Option C -->
+          <label [ngClass]="{
+              'correct-answer': question.ans === 3,
+              'wrong-answer': selectedAnswers[i] === 3 && question.ans !== 3
+            }">
+            {{ question.optionC }}
+            <span *ngIf="selectedAnswers[i] === 3">(Your Answer)</span>
+            <span *ngIf="question.ans === 3">(Correct Answer)</span>
+          </label>
+
+          <!-- Option D -->
+          <label [ngClass]="{
+              'correct-answer': question.ans === 4,
+              'wrong-answer': selectedAnswers[i] === 4 && question.ans !== 4
+            }">
+            {{ question.optionD }}
+            <span *ngIf="selectedAnswers[i] === 4">(Your Answer)</span>
+            <span *ngIf="question.ans === 4">(Correct Answer)</span>
+          </label>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
