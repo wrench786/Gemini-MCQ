@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/89df3478-e655-4e7e-8efc-f912f19fd3b9)# MCQ Generation Web Application
+# Gemini-MCQ
 
 ## Overview
 
@@ -13,6 +13,8 @@ A full-stack web application that dynamically generates multiple-choice question
 - **Responsive UI**: Built with Angular for a seamless user experience.
 
 - ![image](https://github.com/user-attachments/assets/03b7323b-b76e-42d4-82d8-1a300fde65bf)
+- ![image](https://github.com/user-attachments/assets/1eddab65-22ce-4349-8655-11bdbe3b6450)
+
 
 
 ## Tech Stack
